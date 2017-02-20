@@ -23,8 +23,11 @@
  */
 package za.co.mmagon.jwebswing.components.pace;
 
+import java.util.logging.Logger;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
+import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import za.co.mmagon.logger.LogFactory;
 
 /**
  *
@@ -32,17 +35,35 @@ import za.co.mmagon.jwebswing.PageConfigurator;
  * @since 13 Feb 2017
  *
  */
-public class PaceLoaderConfigurator implements PageConfigurator
+@PluginInformation(pluginName = "Pace Loader", pluginUniqueName = "pace-loader", pluginDescription = "Pace is a Javascript and CSS library to automatically add beautiful progress and activity indicators for page loads and ajax navigation", pluginVersion = "1.0.2",
+        pluginDependancyUniqueIDs = "", pluginCategories = "js, loader, pace", pluginSubtitle = "Automatically add a progress bar to your site",
+        pluginGitUrl = "https://github.com/GedMarc/JWebSwing-PacePlugin", pluginSourceUrl = "https://github.com/HubSpot/pace/",
+        pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-PacePlugin/wiki",
+        pluginOriginalHomepage = "http://github.hubspot.com/pace/")
+public class PaceLoaderConfigurator extends PageConfigurator
 {
+
+    private static final Logger log = LogFactory.getInstance().getLogger("PaceLoader");
+    public static final String PaceEnabled = "pace-enabled";
+
+    private static final long serialVersionUID = 1L;
 
     public PaceLoaderConfigurator()
     {
 
     }
 
+    @Override
     public Page configure(Page page)
     {
-        System.out.println("Configuring pace");
+//        if (!page.isConfigured())
+//        {
+//            if (page.getBody().readChildrenPropertyFirstResult(PaceEnabled, true))
+//            {
+//                log.fine("Configuring pace");
+////                page.getBody().
+//            }
+//        }
         return page;
     }
 }

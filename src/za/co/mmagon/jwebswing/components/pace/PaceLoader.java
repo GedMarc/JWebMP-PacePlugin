@@ -49,6 +49,7 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
         super("PaceLoader");
         this.theme = theme;
         addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
+        getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
     }
 
     /**

@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,9 +16,10 @@
  */
 package za.co.mmagon.jwebswing.components.pace;
 
-import za.co.mmagon.jwebswing.base.references.*;
-import za.co.mmagon.jwebswing.base.servlets.enumarations.*;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.*;
+import za.co.mmagon.jwebswing.base.references.CSSReference;
+import za.co.mmagon.jwebswing.base.references.JavascriptReference;
+import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
+import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
 
 /**
  *
@@ -33,6 +34,9 @@ public enum PaceLoaderReferencePool implements ReferencePool
      * Put Pace Loader First
      */
     PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js", 0), -1),
+    /**
+     * A disable pace web services script
+     */
     PaceLoaderDisableWebSockets(new JavascriptReference("PACE_DisableWebSockets", 1.02, "javascript/pace_ws_disable.js", "javascript/pace_ws_disable.js", 1), 0);
 
     private JavascriptReference javaScriptReference;

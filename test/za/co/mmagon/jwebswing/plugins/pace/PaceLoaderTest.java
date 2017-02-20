@@ -14,11 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
+package za.co.mmagon.jwebswing.plugins.pace;
 
 import org.junit.Test;
 import za.co.mmagon.BaseTestClass;
 import za.co.mmagon.jwebswing.Page;
+import za.co.mmagon.jwebswing.components.pace.PaceLoader;
+import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
 import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 
 /**
@@ -42,6 +44,7 @@ public class PaceLoaderTest extends BaseTestClass
 
         pl.getTheme().setThemeColour(PaceThemeColour.Orange);
         System.out.println(pl.toString());
+
     }
 
     @Test
