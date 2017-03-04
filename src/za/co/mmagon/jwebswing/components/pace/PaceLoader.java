@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,6 +21,7 @@ import za.co.mmagon.jwebswing.base.html.interfaces.children.BodyFeatures;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.Loader;
 import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
  * An implementation of Pace Loader
@@ -29,6 +30,9 @@ import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
  * @since 29 Aug 2015
  * @version 1.0
  */
+@ComponentInformation(name = "Pace",
+                      description = "Automatic page load progress bar",
+                      url = "http://github.hubspot.com/pace/docs/welcome/")
 public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
         implements Loader, BodyFeatures, IPaceLoader
 {
