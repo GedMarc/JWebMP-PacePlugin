@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -40,8 +40,8 @@ import za.co.mmagon.logger.LogFactory;
                    pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-PacePlugin/wiki",
                    pluginOriginalHomepage = "http://github.hubspot.com/pace/",
                    pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/PacePlugin.jar/download",
-                   pluginIconUrl = "bower_components/pace/logo.jpg",
-                   pluginIconImageUrl = "bower_components/pace/example.png",
+                   pluginIconUrl = "bower_components/PACE/logo.jpg",
+                   pluginIconImageUrl = "bower_components/PACE/example.png",
                    pluginLastUpdatedDate = "2017/03/04"
 )
 public class PaceLoaderConfigurator extends PageConfigurator
