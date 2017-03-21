@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,8 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package za.co.mmagon.jwebswing.components.pace;
-
-import za.co.mmagon.jwebswing.components.newcomponents.*;
 
 /**
  *
