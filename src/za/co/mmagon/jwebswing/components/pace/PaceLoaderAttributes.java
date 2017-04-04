@@ -20,7 +20,7 @@ package za.co.mmagon.jwebswing.components.pace;
  *
  * @author GedMarc
  */
-public enum PaceLoaderAttributes
+enum PaceLoaderAttributes
 {
     Visibility;
 }

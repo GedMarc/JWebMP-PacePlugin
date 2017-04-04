@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ public enum PaceLoaderReferencePool implements ReferencePool
     /**
      * Put Pace Loader First
      */
-    PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js", 0), -1),
+    PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.min.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js", 0), -1),
     /**
      * A disable pace web services script
      */

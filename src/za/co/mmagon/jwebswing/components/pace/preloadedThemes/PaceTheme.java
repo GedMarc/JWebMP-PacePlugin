@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -74,10 +74,12 @@ public enum PaceTheme
      * Sets the CSS Reference for the pace theme
      *
      * @param CSSReference
+     * @return
      */
-    public void setCSSReference(CSSReference CSSReference)
+    public PaceTheme setCSSReference(CSSReference CSSReference)
     {
         this.CSSReference = CSSReference;
+        return this;
     }
 
     /**
@@ -94,10 +96,12 @@ public enum PaceTheme
      * Sets the pace theme colour applied
      *
      * @param themeColour
+     * @return
      */
-    public void setThemeColour(PaceThemeColour themeColour)
+    public PaceTheme setThemeColour(PaceThemeColour themeColour)
     {
         this.themeColour = themeColour;
+        return this;
     }
 
 }

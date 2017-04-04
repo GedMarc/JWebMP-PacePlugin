@@ -24,7 +24,7 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
  * @since 07 Aug 2015
  * @version 1.0
  */
-public interface PaceLoaderChildren extends GlobalChildren
+interface PaceLoaderChildren extends GlobalChildren
 {
 
 }

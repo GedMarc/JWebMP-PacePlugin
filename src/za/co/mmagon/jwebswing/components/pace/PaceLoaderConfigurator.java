@@ -19,6 +19,7 @@ package za.co.mmagon.jwebswing.components.pace;
 import java.util.logging.Logger;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
+import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 import za.co.mmagon.logger.LogFactory;
 
@@ -52,6 +53,8 @@ public class PaceLoaderConfigurator extends PageConfigurator
 
     private static final long serialVersionUID = 1L;
 
+    public static PaceTheme paceTheme = PaceTheme.Flash;
+
     public PaceLoaderConfigurator()
     {
 
@@ -60,14 +63,13 @@ public class PaceLoaderConfigurator extends PageConfigurator
     @Override
     public Page configure(Page page)
     {
-//        if (!page.isConfigured())
-//        {
-//            if (page.getBody().readChildrenPropertyFirstResult(PaceEnabled, true))
-//            {
-//                log.fine("Configuring pace");
-////                page.getBody().
-//            }
-//        }
+        if (!page.isConfigured())
+        {
+            log.fine("Configuring pace");
+            page.getBody().addFeature(new PaceLoader(paceTheme));
+            log.fine("Pace was added to the body successfully");
+
+        }
         return page;
     }
 }
