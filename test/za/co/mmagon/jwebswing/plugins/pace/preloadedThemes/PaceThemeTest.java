@@ -22,26 +22,25 @@ import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 import za.co.mmagon.jwebswing.generics.WebReference;
 
 /**
- *
  * @author ged_m
  */
 public class PaceThemeTest
 {
 
-    public PaceThemeTest()
-    {
-    }
+	public PaceThemeTest()
+	{
+	}
 
-    /**
-     * Test of values method, of class PaceTheme.
-     */
-    @Test
-    public void testValues()
-    {
-        PaceTheme pc = PaceTheme.Barbershop;
-        WebReference.setIsLocal(false);
-        System.out.println(pc.getCSSReference());
-        Assert.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-barber-shop.css", pc.getCSSReference().toString());
-    }
+	/**
+	 * Test of values method, of class PaceTheme.
+	 */
+	@Test
+	public void testValues()
+	{
+		PaceTheme pc = PaceTheme.Barbershop;
+		WebReference.setIsLocal(false);
+		System.out.println(pc.getCSSReference());
+		Assert.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-barber-shop.css", pc.getCSSReference().toString());
+	}
 
 }

@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-	"PACE": "pace#*"
+    "PACE": "pace#*"
   }
 }

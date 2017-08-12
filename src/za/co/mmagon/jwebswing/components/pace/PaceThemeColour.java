@@ -24,21 +24,21 @@ package za.co.mmagon.jwebswing.components.pace;
  */
 public enum PaceThemeColour
 {
-    Black,
-    Red,
-    Blue,
-    Green,
-    Orange,
-    Pink,
-    Purple,
-    Silver,
-    White,
-    Yellow;
+	Black,
+	Red,
+	Blue,
+	Green,
+	Orange,
+	Pink,
+	Purple,
+	Silver,
+	White,
+	Yellow;
 
-    @Override
-    public String toString()
-    {
-        return name().toLowerCase();
-    }
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase();
+	}
 
 }

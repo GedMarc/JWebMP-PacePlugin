@@ -22,53 +22,52 @@ import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
 
 /**
- *
  * @author GedMarc
- * @since Mar 4, 2015
  * @version 1.0
+ * @since Mar 4, 2015
  */
 public enum PaceLoaderReferencePool implements ReferencePool
 {
 
-    /**
-     * Put Pace Loader First
-     */
-    PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.min.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js", 0), -1),
-    /**
-     * A disable pace web services script
-     */
-    PaceLoaderDisableWebSockets(new JavascriptReference("PACE_DisableWebSockets", 1.02, "javascript/pace_ws_disable.js", "javascript/pace_ws_disable.js", 1), 0);
+	/**
+	 * Put Pace Loader First
+	 */
+	PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.min.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js", 0), -1),
+	/**
+	 * A disable pace web services script
+	 */
+	PaceLoaderDisableWebSockets(new JavascriptReference("PACE_DisableWebSockets", 1.02, "javascript/pace_ws_disable.js", "javascript/pace_ws_disable.js", 1), 0);
 
-    private JavascriptReference javaScriptReference;
+	private JavascriptReference javaScriptReference;
 
-    private PaceLoaderReferencePool(JavascriptReference javaScriptReference, int sortOrder)
-    {
-        this.javaScriptReference = javaScriptReference;
-        this.javaScriptReference.setSortOrder(sortOrder);
-        javaScriptReference.setPriority(RequirementsPriority.Top_Shelf);
-    }
+	private PaceLoaderReferencePool(JavascriptReference javaScriptReference, int sortOrder)
+	{
+		this.javaScriptReference = javaScriptReference;
+		this.javaScriptReference.setSortOrder(sortOrder);
+		javaScriptReference.setPriority(RequirementsPriority.Top_Shelf);
+	}
 
-    @Override
-    public JavascriptReference getJavaScriptReference()
-    {
-        return javaScriptReference;
-    }
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
 
-    @Override
-    public void setJavaScriptReference(JavascriptReference javaScriptReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-    }
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+	}
 
-    @Override
-    public CSSReference getCssReference()
-    {
-        return null;
-    }
+	@Override
+	public CSSReference getCssReference()
+	{
+		return null;
+	}
 
-    @Override
-    public void setCssReference(CSSReference cssReference)
-    {
+	@Override
+	public void setCssReference(CSSReference cssReference)
+	{
 
-    }
+	}
 }

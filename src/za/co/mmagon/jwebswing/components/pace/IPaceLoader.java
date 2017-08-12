@@ -19,26 +19,24 @@ package za.co.mmagon.jwebswing.components.pace;
 import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 
 /**
- *
  * @author GedMarc
  * @since 13 Feb 2017
- * 
  */
-public interface IPaceLoader 
+public interface IPaceLoader
 {
-
-    /**
-     * Gets the current pace loader theme
-     *
-     * @return
-     */
-    PaceTheme getTheme();
-
-    /**
-     * Sets the theme for this pace loader
-     *
-     * @param theme
-     */
-    void setTheme(PaceTheme theme);
-
+	
+	/**
+	 * Gets the current pace loader theme
+	 *
+	 * @return
+	 */
+	PaceTheme getTheme();
+	
+	/**
+	 * Sets the theme for this pace loader
+	 *
+	 * @param theme
+	 */
+	void setTheme(PaceTheme theme);
+	
 }

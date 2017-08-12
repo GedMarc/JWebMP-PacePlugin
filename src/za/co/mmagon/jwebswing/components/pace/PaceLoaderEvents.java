@@ -19,10 +19,9 @@ package za.co.mmagon.jwebswing.components.pace;
 import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 
 /**
- *
  * @author Marc Magon
- * @since 07 Aug 2015
  * @version 1.0
+ * @since 07 Aug 2015
  */
 interface PaceLoaderEvents extends GlobalEvents
 {

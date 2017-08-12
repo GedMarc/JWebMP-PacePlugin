@@ -24,37 +24,36 @@ import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
 import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 
 /**
- *
  * @author ged_m
  */
 public class PaceLoaderTest extends BaseTestClass
 {
 
-    public PaceLoaderTest()
-    {
-    }
+	public PaceLoaderTest()
+	{
+	}
 
-    /**
-     * Test of setTheme method, of class PaceLoader.
-     */
-    @Test
-    public void testSetTheme()
-    {
-        PaceLoader pl = new PaceLoader(PaceTheme.Barbershop);
+	/**
+	 * Test of setTheme method, of class PaceLoader.
+	 */
+	@Test
+	public void testSetTheme()
+	{
+		PaceLoader pl = new PaceLoader(PaceTheme.Barbershop);
 
-        pl.getTheme().setThemeColour(PaceThemeColour.Orange);
-        System.out.println(pl.toString());
+		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
+		System.out.println(pl.toString());
 
-    }
+	}
 
-    @Test
-    public void testPageConfiguration()
-    {
-        Page p = getInstance();
-        PaceLoader pl;
-        p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
-        pl.getTheme().setThemeColour(PaceThemeColour.Yellow);
-        System.out.println(p.toString(true));
-    }
+	@Test
+	public void testPageConfiguration()
+	{
+		Page p = getInstance();
+		PaceLoader pl;
+		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
+		pl.getTheme().setThemeColour(PaceThemeColour.Yellow);
+		System.out.println(p.toString(true));
+	}
 
 }
