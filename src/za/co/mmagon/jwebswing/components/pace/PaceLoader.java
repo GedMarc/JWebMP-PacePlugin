@@ -56,7 +56,13 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
 	}
-
+	
+	@Override
+	protected void assignFunctionsToComponent()
+	{
+	
+	}
+	
 	/**
 	 * A nicer view
 	 *
