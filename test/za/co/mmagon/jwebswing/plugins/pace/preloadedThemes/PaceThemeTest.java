@@ -16,8 +16,8 @@
  */
 package za.co.mmagon.jwebswing.plugins.pace.preloadedThemes;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
 import za.co.mmagon.jwebswing.generics.WebReference;
 
@@ -40,7 +40,7 @@ public class PaceThemeTest
 		PaceTheme pc = PaceTheme.Barbershop;
 		WebReference.setIsLocal(false);
 		System.out.println(pc.getCSSReference());
-		Assert.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-barber-shop.css", pc.getCSSReference().toString());
+		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-barber-shop.css", pc.getCSSReference().toString());
 	}
 
 }
