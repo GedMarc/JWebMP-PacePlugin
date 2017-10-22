@@ -16,7 +16,7 @@
  */
 package za.co.mmagon.jwebswing.components.pace;
 
-import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
+import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 
 /**
  * @author GedMarc

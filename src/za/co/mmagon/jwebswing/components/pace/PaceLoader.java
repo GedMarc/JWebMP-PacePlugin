@@ -19,7 +19,7 @@ package za.co.mmagon.jwebswing.components.pace;
 import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.html.interfaces.children.BodyFeatures;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.Loader;
-import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
+import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
@@ -56,13 +56,13 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
 	}
-	
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-	
+		//Nothing Needed
 	}
-	
+
 	/**
 	 * A nicer view
 	 *
@@ -103,5 +103,34 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 			addCssReference(theme.getCSSReference());
 		}
 		super.preConfigure();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof PaceLoader))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		PaceLoader that = (PaceLoader) o;
+
+		return getTheme() == that.getTheme();
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getTheme() != null ? getTheme().hashCode() : 0);
+		return result;
 	}
 }

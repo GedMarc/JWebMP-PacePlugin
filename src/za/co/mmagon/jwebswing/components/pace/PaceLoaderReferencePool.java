@@ -40,7 +40,7 @@ public enum PaceLoaderReferencePool implements ReferencePool
 
 	private JavascriptReference javaScriptReference;
 
-	private PaceLoaderReferencePool(JavascriptReference javaScriptReference, int sortOrder)
+	PaceLoaderReferencePool(JavascriptReference javaScriptReference, int sortOrder)
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.javaScriptReference.setSortOrder(sortOrder);
@@ -68,6 +68,6 @@ public enum PaceLoaderReferencePool implements ReferencePool
 	@Override
 	public void setCssReference(CSSReference cssReference)
 	{
-
+		//Nothing Needed
 	}
 }

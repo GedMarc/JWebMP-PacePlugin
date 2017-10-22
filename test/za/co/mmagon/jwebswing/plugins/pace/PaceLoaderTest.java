@@ -21,7 +21,7 @@ import za.co.mmagon.jwebswing.BaseTestClass;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.components.pace.PaceLoader;
 import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
-import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
+import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 
 /**
  * @author ged_m

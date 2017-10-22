@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace.preloadedThemes;
+package za.co.mmagon.jwebswing.components.pace.preloadedthemes;
 
 import za.co.mmagon.jwebswing.base.references.CSSReference;
 import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
@@ -50,7 +50,7 @@ public enum PaceTheme
 	 *
 	 * @param CSSReference
 	 */
-	private PaceTheme(CSSReference CSSReference)
+	PaceTheme(CSSReference CSSReference)
 	{
 		this.CSSReference = CSSReference;
 		this.CSSReference.setPriority(RequirementsPriority.First);

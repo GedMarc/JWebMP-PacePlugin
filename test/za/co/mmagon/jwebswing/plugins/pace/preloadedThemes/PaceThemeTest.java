@@ -18,7 +18,7 @@ package za.co.mmagon.jwebswing.plugins.pace.preloadedThemes;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
+import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 import za.co.mmagon.jwebswing.generics.WebReference;
 
 /**

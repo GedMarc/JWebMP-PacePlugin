@@ -18,7 +18,7 @@ package za.co.mmagon.jwebswing.components.pace;
 
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.components.pace.preloadedThemes.PaceTheme;
+import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 import za.co.mmagon.logger.LogFactory;
 
@@ -51,11 +51,11 @@ public class PaceLoaderConfigurator extends PageConfigurator
 	private static final Logger log = LogFactory.getInstance().getLogger("PaceLoader");
 	private static final long serialVersionUID = 1L;
 
-	public static PaceTheme paceTheme = PaceTheme.Flash;
+	private static PaceTheme paceTheme = PaceTheme.Flash;
 
 	public PaceLoaderConfigurator()
 	{
-
+		//Nothing Needed
 	}
 
 	@Override
@@ -70,4 +70,16 @@ public class PaceLoaderConfigurator extends PageConfigurator
 		}
 		return page;
 	}
+
+	public static PaceTheme getPaceTheme()
+	{
+		return paceTheme;
+	}
+
+	public static void setPaceTheme(PaceTheme paceTheme)
+	{
+		PaceLoaderConfigurator.paceTheme = paceTheme;
+	}
+
+
 }
