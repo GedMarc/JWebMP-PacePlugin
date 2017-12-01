@@ -18,6 +18,8 @@ package za.co.mmagon.jwebswing.plugins.pace.preloadedThemes;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import za.co.mmagon.jwebswing.components.pace.PaceLoaderConfigurator;
+import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
 import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 import za.co.mmagon.jwebswing.generics.WebReference;
 
@@ -38,9 +40,11 @@ public class PaceThemeTest
 	public void testValues()
 	{
 		PaceTheme pc = PaceTheme.Barbershop;
+		PaceLoaderConfigurator.setPaceTheme(pc);
+		pc.setThemeColour(PaceThemeColour.Red);
 		WebReference.setIsLocal(false);
 		System.out.println(pc.getCSSReference());
-		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-barber-shop.css", pc.getCSSReference().toString());
+		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.css", pc.getCSSReference().toString());
 	}
 
 }
