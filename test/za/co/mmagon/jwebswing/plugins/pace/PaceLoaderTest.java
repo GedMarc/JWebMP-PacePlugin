@@ -52,7 +52,7 @@ public class PaceLoaderTest extends BaseTestClass
 		Page p = getInstance();
 		PaceLoader pl;
 		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
-		pl.getTheme().setThemeColour(PaceThemeColour.Yellow);
+		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
 		System.out.println(p.toString(true));
 	}
 

@@ -41,7 +41,7 @@ public class PaceThemeTest
 	{
 		PaceTheme pc = PaceTheme.Barbershop;
 		PaceLoaderConfigurator.setPaceTheme(pc);
-		pc.setThemeColour(PaceThemeColour.Red);
+		pc.setThemeColour(PaceThemeColour.Orange);
 		WebReference.setIsLocal(false);
 		System.out.println(pc.getCSSReference());
 		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.css", pc.getCSSReference().toString());
