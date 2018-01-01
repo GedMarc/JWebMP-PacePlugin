@@ -46,7 +46,6 @@ import java.util.logging.Logger;
 )
 public class PaceLoaderConfigurator extends PageConfigurator
 {
-
 	public static final String PaceEnabled = "pace-enabled";
 	private static final Logger log = LogFactory.getInstance().getLogger("PaceLoader");
 	private static final long serialVersionUID = 1L;
