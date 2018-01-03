@@ -19,6 +19,7 @@ package za.co.mmagon.jwebswing.plugins.pace;
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.BaseTestClass;
 import za.co.mmagon.jwebswing.Page;
+import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
 import za.co.mmagon.jwebswing.components.pace.PaceLoader;
 import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
 import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
@@ -50,6 +51,19 @@ public class PaceLoaderTest extends BaseTestClass
 	public void testPageConfiguration()
 	{
 		Page p = getInstance();
+		p.getOptions().setDynamicRender(false);
+		PaceLoader pl;
+		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
+		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
+		System.out.println(p.toString(true));
+	}
+
+	@Test
+	public void testAngularPageConfiguration()
+	{
+		Page p = getInstance();
+		AngularPageConfigurator.setRequired(p.getBody(), true);
+		p.getOptions().setDynamicRender(false);
 		PaceLoader pl;
 		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
 		pl.getTheme().setThemeColour(PaceThemeColour.Orange);

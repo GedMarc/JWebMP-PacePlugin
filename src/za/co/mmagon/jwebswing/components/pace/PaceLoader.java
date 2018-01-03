@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,6 +16,7 @@
  */
 package za.co.mmagon.jwebswing.components.pace;
 
+import za.co.mmagon.FileTemplates;
 import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.html.interfaces.children.BodyFeatures;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.Loader;
@@ -44,6 +45,7 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 	 */
 	private PaceTheme theme;
 
+
 	/**
 	 * Creates a Pace Loader with a theme
 	 *
@@ -53,6 +55,8 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 	{
 		super("PaceLoader");
 		this.theme = theme;
+		FileTemplates.getTemplateVariables().put("//PACE_TRACK_START", new StringBuilder("Pace.track(function(){" + getNewLine()));
+		FileTemplates.getTemplateVariables().put("//PACE_TRACK_END", new StringBuilder("});" + getNewLine()));
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
 	}
