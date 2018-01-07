@@ -62,7 +62,7 @@ public class PaceLoaderTest extends BaseTestClass
 	public void testAngularPageConfiguration()
 	{
 		Page p = getInstance();
-		AngularPageConfigurator.setRequired(p.getBody(), true);
+		AngularPageConfigurator.setRequired(true);
 		p.getOptions().setDynamicRender(false);
 		PaceLoader pl;
 		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
