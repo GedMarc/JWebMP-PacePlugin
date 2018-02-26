@@ -60,9 +60,7 @@ public class PaceLoaderConfigurator extends PageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		log.fine("Configuring pace");
 		page.getBody().addFeature(new PaceLoader(paceTheme));
-		log.fine("Pace was added to the body successfully");
 		return page;
 	}
 
