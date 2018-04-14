@@ -14,12 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
+package com.jwebmp.components.pace;
 
 /**
+ * All custom colours supported by the CDN
+ *
  * @author GedMarc
+ * @since 20 Apr 2016
  */
-enum PaceLoaderAttributes
+public enum PaceThemeColour
 {
-	Visibility;
+	Black,
+	Red,
+	Blue,
+	Green,
+	Orange,
+	Pink,
+	Purple,
+	Silver,
+	White,
+	Yellow;
+
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase();
+	}
+
 }

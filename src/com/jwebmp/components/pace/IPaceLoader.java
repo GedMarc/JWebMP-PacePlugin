@@ -14,16 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
+package com.jwebmp.components.pace;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 
 /**
- * @author Marc Magon
- * @version 1.0
- * @since 07 Aug 2015
+ * @author GedMarc
+ * @since 13 Feb 2017
  */
-interface PaceLoaderEvents extends GlobalEvents
+public interface IPaceLoader
 {
+
+	/**
+	 * Gets the current pace loader theme
+	 *
+	 * @return
+	 */
+	PaceTheme getTheme();
+
+	/**
+	 * Sets the theme for this pace loader
+	 *
+	 * @param theme
+	 */
+	void setTheme(PaceTheme theme);
 
 }

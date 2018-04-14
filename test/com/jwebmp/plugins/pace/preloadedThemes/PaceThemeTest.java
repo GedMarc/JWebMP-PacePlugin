@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 ged_m
+ * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.pace.preloadedThemes;
+package com.jwebmp.plugins.pace.preloadedThemes;
 
+import com.jwebmp.components.pace.PaceLoaderConfigurator;
+import com.jwebmp.components.pace.PaceThemeColour;
+import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
+import com.jwebmp.generics.WebReference;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.components.pace.PaceLoaderConfigurator;
-import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
-import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
-import za.co.mmagon.jwebswing.generics.WebReference;
 
 /**
  * @author ged_m
@@ -44,7 +44,8 @@ public class PaceThemeTest
 		pc.setThemeColour(PaceThemeColour.Orange);
 		WebReference.setIsLocal(false);
 		System.out.println(pc.getCSSReference());
-		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.min.css", pc.getCSSReference().toString());
+		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.min.css", pc.getCSSReference()
+		                                                                                                                            .toString());
 	}
 
 }

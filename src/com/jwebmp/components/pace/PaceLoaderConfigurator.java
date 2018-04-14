@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
+package com.jwebmp.components.pace;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
+import com.jwebmp.plugins.PluginInformation;
 import za.co.mmagon.logger.LogFactory;
 
 import java.util.logging.Logger;
@@ -42,12 +42,13 @@ import java.util.logging.Logger;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/PacePlugin.jar/download",
 		pluginIconUrl = "bower_components/PACE/logo.jpg",
 		pluginIconImageUrl = "bower_components/PACE/example.png",
-		pluginLastUpdatedDate = "2017/03/04"
-)
-public class PaceLoaderConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/03/04")
+public class PaceLoaderConfigurator
+		extends PageConfigurator
 {
 	public static final String PaceEnabled = "pace-enabled";
-	private static final Logger log = LogFactory.getInstance().getLogger("PaceLoader");
+	private static final Logger log = LogFactory.getInstance()
+	                                            .getLogger("PaceLoader");
 	private static final long serialVersionUID = 1L;
 
 	private static PaceTheme paceTheme = PaceTheme.Flash;
@@ -55,13 +56,6 @@ public class PaceLoaderConfigurator extends PageConfigurator
 	public PaceLoaderConfigurator()
 	{
 		//Nothing Needed
-	}
-
-	@Override
-	public Page configure(Page page)
-	{
-		page.getBody().addFeature(new PaceLoader(paceTheme));
-		return page;
 	}
 
 	public static PaceTheme getPaceTheme()
@@ -72,6 +66,14 @@ public class PaceLoaderConfigurator extends PageConfigurator
 	public static void setPaceTheme(PaceTheme paceTheme)
 	{
 		PaceLoaderConfigurator.paceTheme = paceTheme;
+	}
+
+	@Override
+	public Page configure(Page page)
+	{
+		page.getBody()
+		    .addFeature(new PaceLoader(paceTheme));
+		return page;
 	}
 
 

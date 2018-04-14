@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
+package com.jwebmp.components.pace;
 
-import za.co.mmagon.FileTemplates;
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.html.interfaces.children.BodyFeatures;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.Loader;
-import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.Feature;
+import com.jwebmp.FileTemplates;
+import com.jwebmp.base.html.interfaces.children.BodyFeatures;
+import com.jwebmp.base.servlets.interfaces.Loader;
+import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.plugins.ComponentInformation;
 
 /**
  * An implementation of Pace Loader
@@ -35,7 +35,8 @@ import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 @ComponentInformation(name = "Pace",
 		description = "Automatic page load progress bar",
 		url = "http://github.hubspot.com/pace/docs/welcome/")
-public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
+public class PaceLoader
+		extends Feature<JavaScriptPart, PaceLoader>
 		implements Loader, BodyFeatures, IPaceLoader
 {
 
@@ -55,16 +56,12 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 	{
 		super("PaceLoader");
 		this.theme = theme;
-		FileTemplates.getTemplateVariables().put("//PACE_TRACK_START", new StringBuilder("Pace.track(function(){" + getNewLine()));
-		FileTemplates.getTemplateVariables().put("//PACE_TRACK_END", new StringBuilder("});" + getNewLine()));
+		FileTemplates.getTemplateVariables()
+		             .put("//PACE_TRACK_START", new StringBuilder("Pace.track(function(){" + getNewLine()));
+		FileTemplates.getTemplateVariables()
+		             .put("//PACE_TRACK_END", new StringBuilder("});" + getNewLine()));
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
-	}
-
-	@Override
-	protected void assignFunctionsToComponent()
-	{
-		//Nothing Needed
 	}
 
 	/**
@@ -77,28 +74,6 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 		return this;
 	}
 
-	/**
-	 * Gets the current pace loader theme
-	 *
-	 * @return
-	 */
-	@Override
-	public PaceTheme getTheme()
-	{
-		return theme;
-	}
-
-	/**
-	 * Sets the theme for this pace loader
-	 *
-	 * @param theme
-	 */
-	@Override
-	public void setTheme(PaceTheme theme)
-	{
-		this.theme = theme;
-	}
-
 	@Override
 	public void preConfigure()
 	{
@@ -107,6 +82,14 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 			addCssReference(theme.getCSSReference());
 		}
 		super.preConfigure();
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getTheme() != null ? getTheme().hashCode() : 0);
+		return result;
 	}
 
 	@Override
@@ -131,10 +114,30 @@ public class PaceLoader extends Feature<JavaScriptPart, PaceLoader>
 	}
 
 	@Override
-	public int hashCode()
+	protected void assignFunctionsToComponent()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getTheme() != null ? getTheme().hashCode() : 0);
-		return result;
+		//Nothing Needed
+	}
+
+	/**
+	 * Gets the current pace loader theme
+	 *
+	 * @return
+	 */
+	@Override
+	public PaceTheme getTheme()
+	{
+		return theme;
+	}
+
+	/**
+	 * Sets the theme for this pace loader
+	 *
+	 * @param theme
+	 */
+	@Override
+	public void setTheme(PaceTheme theme)
+	{
+		this.theme = theme;
 	}
 }

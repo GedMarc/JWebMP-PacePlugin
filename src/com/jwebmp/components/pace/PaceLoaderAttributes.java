@@ -14,16 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pace;
-
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
+package com.jwebmp.components.pace;
 
 /**
- * @author Marc Magon
- * @version 1.0
- * @since 07 Aug 2015
+ * @author GedMarc
  */
-interface PaceLoaderChildren extends GlobalChildren
+enum PaceLoaderAttributes
 {
-
+	Visibility
 }

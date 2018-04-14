@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 ged_m
+ * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,20 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.pace;
+package com.jwebmp.plugins.pace;
 
+import com.jwebmp.BaseTestClass;
+import com.jwebmp.Page;
+import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.components.pace.PaceLoader;
+import com.jwebmp.components.pace.PaceThemeColour;
+import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.BaseTestClass;
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
-import za.co.mmagon.jwebswing.components.pace.PaceLoader;
-import za.co.mmagon.jwebswing.components.pace.PaceThemeColour;
-import za.co.mmagon.jwebswing.components.pace.preloadedthemes.PaceTheme;
 
 /**
  * @author ged_m
  */
-public class PaceLoaderTest extends BaseTestClass
+public class PaceLoaderTest
+		extends BaseTestClass
 {
 
 	public PaceLoaderTest()
@@ -42,7 +43,8 @@ public class PaceLoaderTest extends BaseTestClass
 	{
 		PaceLoader pl = new PaceLoader(PaceTheme.Barbershop);
 
-		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
+		pl.getTheme()
+		  .setThemeColour(PaceThemeColour.Orange);
 		System.out.println(pl.toString());
 
 	}
@@ -51,10 +53,13 @@ public class PaceLoaderTest extends BaseTestClass
 	public void testPageConfiguration()
 	{
 		Page p = getInstance();
-		p.getOptions().setDynamicRender(false);
+		p.getOptions()
+		 .setDynamicRender(false);
 		PaceLoader pl;
-		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
-		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
+		p.getBody()
+		 .addFeature(pl = new PaceLoader(PaceTheme.Bounce));
+		pl.getTheme()
+		  .setThemeColour(PaceThemeColour.Orange);
 		System.out.println(p.toString(true));
 	}
 
@@ -63,10 +68,13 @@ public class PaceLoaderTest extends BaseTestClass
 	{
 		Page p = getInstance();
 		AngularPageConfigurator.setRequired(true);
-		p.getOptions().setDynamicRender(false);
+		p.getOptions()
+		 .setDynamicRender(false);
 		PaceLoader pl;
-		p.getBody().addFeature(pl = new PaceLoader(PaceTheme.Bounce));
-		pl.getTheme().setThemeColour(PaceThemeColour.Orange);
+		p.getBody()
+		 .addFeature(pl = new PaceLoader(PaceTheme.Bounce));
+		pl.getTheme()
+		  .setThemeColour(PaceThemeColour.Orange);
 		System.out.println(p.toString(true));
 	}
 
