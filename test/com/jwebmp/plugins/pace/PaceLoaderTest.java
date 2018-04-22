@@ -16,7 +16,6 @@
  */
 package com.jwebmp.plugins.pace;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.Page;
 import com.jwebmp.base.angular.AngularPageConfigurator;
 import com.jwebmp.components.pace.PaceLoader;
@@ -28,7 +27,7 @@ import org.junit.jupiter.api.Test;
  * @author ged_m
  */
 public class PaceLoaderTest
-		extends BaseTestClass
+
 {
 
 	public PaceLoaderTest()
@@ -52,7 +51,7 @@ public class PaceLoaderTest
 	@Test
 	public void testPageConfiguration()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		PaceLoader pl;
@@ -66,7 +65,7 @@ public class PaceLoaderTest
 	@Test
 	public void testAngularPageConfiguration()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		AngularPageConfigurator.setRequired(true);
 		p.getOptions()
 		 .setDynamicRender(false);
