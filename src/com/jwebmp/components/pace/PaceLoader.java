@@ -60,8 +60,13 @@ public class PaceLoader
 		             .put("//PACE_TRACK_START", new StringBuilder("Pace.track(function(){" + getNewLine()));
 		FileTemplates.getTemplateVariables()
 		             .put("//PACE_TRACK_END", new StringBuilder("});" + getNewLine()));
+
+
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
-		getProperties().put(PaceLoaderConfigurator.PaceEnabled, true);
+		addCssReference(theme.getCSSReference());
+
+
+		getProperties().put(PaceLoaderPageConfigurator.PaceEnabled, true);
 	}
 
 	/**
@@ -87,30 +92,13 @@ public class PaceLoader
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getTheme() != null ? getTheme().hashCode() : 0);
-		return result;
+		return super.hashCode();
 	}
 
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof PaceLoader))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		PaceLoader that = (PaceLoader) o;
-
-		return getTheme() == that.getTheme();
+		return super.equals(o);
 	}
 
 	@Override

@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.pace.preloadedThemes;
 
-import com.jwebmp.components.pace.PaceLoaderConfigurator;
+import com.jwebmp.components.pace.PaceLoaderPageConfigurator;
 import com.jwebmp.components.pace.PaceThemeColour;
 import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 import com.jwebmp.generics.WebReference;
@@ -40,7 +40,7 @@ public class PaceThemeTest
 	public void testValues()
 	{
 		PaceTheme pc = PaceTheme.Barbershop;
-		PaceLoaderConfigurator.setPaceTheme(pc);
+		PaceLoaderPageConfigurator.setPaceTheme(pc);
 		pc.setThemeColour(PaceThemeColour.Orange);
 		WebReference.setIsLocal(false);
 		System.out.println(pc.getCSSReference());

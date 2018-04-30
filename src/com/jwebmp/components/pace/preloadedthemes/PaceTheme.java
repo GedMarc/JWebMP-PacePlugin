@@ -27,20 +27,34 @@ import com.jwebmp.components.pace.PaceThemeColour;
  */
 public enum PaceTheme
 {
-	Barbershop(new CSSReference("CSSPaceBarberShop", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-barber-shop.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-barber-shop.min.css")),
-	BigCounter(new CSSReference("CSSPaceBigCounter", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-big-counter.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-big-counter.min.css")),
-	Bounce(new CSSReference("CSSPaceBounce", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-bounce.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-bounce.min.css")),
-	CenterAtom(new CSSReference("CSSPaceCenterAtom", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-atom.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-atom.min.css")),
-	CenterCircle(new CSSReference("CSSPaceCenterCircle", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-circle.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-circle.min.css")),
-	CenterRader(new CSSReference("CSSPaceCenterRader", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-rader.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-radar.min.css")),
-	CenterSimple(new CSSReference("CSSPaceCenterSimple", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-simple.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-simple.min.css")),
-	CornerIndicator(new CSSReference("CSSPaceCornerIndicator", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-cornerIndicator.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-corner-indicator.min.css")),
-	FillLeft(new CSSReference("CSSPaceFillLeft", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-fill-left.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-fill-left.min.css")),
-	Flash(new CSSReference("CSSPaceFlash", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-flash.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-flash.min.css")),
-	FlatTop(new CSSReference("CSSPaceFlatTop", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-flat-top.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-flat-top.min.css")),
-	LoadingProgressBar(new CSSReference("CSSPaceLoadingProgressBar", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-loading-bar.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-loading-bar.min.css")),
-	MacOSX(new CSSReference("CSSPaceMacOSX", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-macosx.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-mac-osx.min.css")),
-	Minimal(new CSSReference("CSSPaceMinimal", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-minimal.min.css", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-minimal.min.css"));
+	Barbershop(new CSSReference("CSSPaceBarberShop", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-barber-shop.min.css",
+	                            "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-barber-shop.min.css")),
+	BigCounter(new CSSReference("CSSPaceBigCounter", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-big-counter.min.css",
+	                            "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-big-counter.min.css")),
+	Bounce(new CSSReference("CSSPaceBounce", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-bounce.min.css",
+	                        "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-bounce.min.css")),
+	CenterAtom(new CSSReference("CSSPaceCenterAtom", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-atom.min.css",
+	                            "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-atom.min.css")),
+	CenterCircle(new CSSReference("CSSPaceCenterCircle", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-circle.min.css",
+	                              "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-circle.min.css")),
+	CenterRader(new CSSReference("CSSPaceCenterRader", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-rader.min.css",
+	                             "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-radar.min.css")),
+	CenterSimple(new CSSReference("CSSPaceCenterSimple", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-center-simple.min.css",
+	                              "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-center-simple.min.css")),
+	CornerIndicator(new CSSReference("CSSPaceCornerIndicator", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-corner-indicator.min.css",
+	                                 "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-corner-indicator.min.css")),
+	FillLeft(new CSSReference("CSSPaceFillLeft", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-fill-left.min.css",
+	                          "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-fill-left.min.css")),
+	Flash(new CSSReference("CSSPaceFlash", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-flash.min.css",
+	                       "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-flash.min.css")),
+	FlatTop(new CSSReference("CSSPaceFlatTop", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-flat-top.min.css",
+	                         "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-flat-top.min.css")),
+	LoadingProgressBar(new CSSReference("CSSPaceLoadingProgressBar", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-loading-bar.min.css",
+	                                    "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-loading-bar.min.css")),
+	MacOSX(new CSSReference("CSSPaceMacOSX", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-macosx.min.css",
+	                        "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-mac-osx.min.css")),
+	Minimal(new CSSReference("CSSPaceMinimal", 1.02, "bower_components/PACE/themes/xxXXxx/pace-theme-minimal.min.css",
+	                         "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/xxXXxx/pace-theme-minimal.min.css"));
 
 	private CSSReference CSSReference;
 	private PaceThemeColour themeColour = PaceThemeColour.Red;
@@ -65,8 +79,10 @@ public enum PaceTheme
 	 */
 	public CSSReference getCSSReference()
 	{
-		CSSReference.setRemoteReference(CSSReference.getRemoteReference().replaceAll("xxXXxx", themeColour.toString()));
-		CSSReference.setLocalReference(CSSReference.getLocalReference().replaceAll("xxXXxx", themeColour.toString()));
+		CSSReference.setRemoteReference(CSSReference.getRemoteReference()
+		                                            .replaceAll("xxXXxx", themeColour.toString()));
+		CSSReference.setLocalReference(CSSReference.getLocalReference()
+		                                           .replaceAll("xxXXxx", themeColour.toString()));
 		return CSSReference;
 	}
 

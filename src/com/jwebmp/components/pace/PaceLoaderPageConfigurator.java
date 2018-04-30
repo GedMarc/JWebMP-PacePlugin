@@ -43,7 +43,7 @@ import java.util.logging.Logger;
 		pluginIconUrl = "bower_components/PACE/logo.jpg",
 		pluginIconImageUrl = "bower_components/PACE/example.png",
 		pluginLastUpdatedDate = "2017/03/04")
-public class PaceLoaderConfigurator
+public class PaceLoaderPageConfigurator
 		extends PageConfigurator
 {
 	public static final String PaceEnabled = "pace-enabled";
@@ -53,7 +53,7 @@ public class PaceLoaderConfigurator
 
 	private static PaceTheme paceTheme = PaceTheme.Flash;
 
-	public PaceLoaderConfigurator()
+	public PaceLoaderPageConfigurator()
 	{
 		//Nothing Needed
 	}
@@ -65,7 +65,7 @@ public class PaceLoaderConfigurator
 
 	public static void setPaceTheme(PaceTheme paceTheme)
 	{
-		PaceLoaderConfigurator.paceTheme = paceTheme;
+		PaceLoaderPageConfigurator.paceTheme = paceTheme;
 	}
 
 	@Override
@@ -73,6 +73,8 @@ public class PaceLoaderConfigurator
 	{
 		page.getBody()
 		    .addFeature(new PaceLoader(paceTheme));
+
+		
 		return page;
 	}
 
