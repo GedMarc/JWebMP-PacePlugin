@@ -40,12 +40,17 @@ public class PaceThemeTest
 	public void testValues()
 	{
 		PaceTheme pc = PaceTheme.Barbershop;
-		PaceLoaderPageConfigurator.setPaceTheme(pc);
-		pc.setThemeColour(PaceThemeColour.Orange);
-		WebReference.setIsLocal(false);
-		System.out.println(pc.getCSSReference());
-		Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.min.css", pc.getCSSReference()
-		                                                                                                                            .toString());
+		synchronized (pc.getCSSReference())
+		{
+			PaceLoaderPageConfigurator.setPaceTheme(pc);
+			pc.setThemeColour(PaceThemeColour.Orange);
+			WebReference.setIsLocal(false);
+			System.out.println(pc.getCSSReference());
+
+			Assertions.assertEquals("https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-barber-shop.min.css", pc.getCSSReference()
+			                                                                                                                            .toString());
+		}
+
 	}
 
 }
