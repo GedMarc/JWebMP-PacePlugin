@@ -19,8 +19,8 @@ package com.jwebmp.components.pace;
 import com.jwebmp.Page;
 import com.jwebmp.PageConfigurator;
 import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
+import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.PluginInformation;
-import za.co.mmagon.logger.LogFactory;
 
 import java.util.logging.Logger;
 
@@ -74,7 +74,7 @@ public class PaceLoaderPageConfigurator
 		page.getBody()
 		    .addFeature(new PaceLoader(paceTheme));
 
-		
+
 		return page;
 	}
 
