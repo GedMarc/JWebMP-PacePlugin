@@ -57,7 +57,7 @@ public class PaceLoader
 		super("PaceLoader");
 		this.theme = theme;
 		FileTemplates.getTemplateVariables()
-		             .put("//PACE_TRACK_START", new StringBuilder("Pace.track(function(){" + getNewLine()));
+		             .put("//PACE_TRACK_START", new StringBuilder("Pace.options.ajax.trackWebSockets = false;" + getNewLine() + "\tPace.track(function(){" + getNewLine()));
 		FileTemplates.getTemplateVariables()
 		             .put("//PACE_TRACK_END", new StringBuilder("});" + getNewLine()));
 
