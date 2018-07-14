@@ -26,7 +26,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @version 1.0
  * @since Mar 4, 2015
  */
-public enum PaceLoaderReferencePool implements ReferencePool
+public enum PaceLoaderReferencePool
+		implements ReferencePool
 {
 
 	/**

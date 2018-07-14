@@ -74,9 +74,7 @@ public class PaceLoaderPageConfigurator
 		page.getBody()
 		    .addFeature(new PaceLoader(paceTheme));
 
-
 		return page;
 	}
-
 
 }
