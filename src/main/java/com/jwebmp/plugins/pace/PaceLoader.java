@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.pace;
+package com.jwebmp.plugins.pace;
 
 import com.jwebmp.Feature;
 import com.jwebmp.FileTemplates;
 import com.jwebmp.base.html.interfaces.children.BodyFeatures;
 import com.jwebmp.base.servlets.interfaces.Loader;
-import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
 /**
  * An implementation of Pace Loader

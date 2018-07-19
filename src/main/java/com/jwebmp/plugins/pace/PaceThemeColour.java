@@ -14,29 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.pace;
-
-import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
+package com.jwebmp.plugins.pace;
 
 /**
+ * All custom colours supported by the CDN
+ *
  * @author GedMarc
- * @since 13 Feb 2017
+ * @since 20 Apr 2016
  */
-public interface IPaceLoader
+public enum PaceThemeColour
 {
+	Black,
+	Red,
+	Blue,
+	Green,
+	Orange,
+	Pink,
+	Purple,
+	Silver,
+	White,
+	Yellow;
 
-	/**
-	 * Gets the current pace loader theme
-	 *
-	 * @return
-	 */
-	PaceTheme getTheme();
-
-	/**
-	 * Sets the theme for this pace loader
-	 *
-	 * @param theme
-	 */
-	void setTheme(PaceTheme theme);
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase();
+	}
 
 }

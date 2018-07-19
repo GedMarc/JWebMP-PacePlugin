@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.components.pace;
+package com.jwebmp.plugins.pace;
 
 import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 

@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.pace.preloadedthemes;
+package com.jwebmp.plugins.pace.preloadedthemes;
 
 import com.jwebmp.base.references.CSSReference;
 import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
-import com.jwebmp.components.pace.PaceThemeColour;
+import com.jwebmp.plugins.pace.PaceThemeColour;
 
 /**
  * Specifies a valid pace theme

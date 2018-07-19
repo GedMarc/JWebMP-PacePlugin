@@ -1,7 +1,7 @@
-module com.jwebmp.components.pace {
+module com.jwebmp.plugins.pace {
 
-	exports com.jwebmp.components.pace;
-	exports com.jwebmp.components.pace.preloadedthemes;
+	exports com.jwebmp.plugins.pace;
+	exports com.jwebmp.plugins.pace.preloadedthemes;
 
 	requires com.jwebmp.core;
 	requires com.jwebmp.logmaster;

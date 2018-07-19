@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.pace;
+package com.jwebmp.plugins.pace;
 
 import com.jwebmp.Page;
 import com.jwebmp.PageConfigurator;
-import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.PluginInformation;
+import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
 import java.util.logging.Logger;
 

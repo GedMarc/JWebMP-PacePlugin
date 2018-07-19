@@ -16,10 +16,10 @@
  */
 package com.jwebmp.plugins.pace.preloadedThemes;
 
-import com.jwebmp.components.pace.PaceLoaderPageConfigurator;
-import com.jwebmp.components.pace.PaceThemeColour;
-import com.jwebmp.components.pace.preloadedthemes.PaceTheme;
 import com.jwebmp.generics.WebReference;
+import com.jwebmp.plugins.pace.PaceLoaderPageConfigurator;
+import com.jwebmp.plugins.pace.PaceThemeColour;
+import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 import org.junit.jupiter.api.Test;
 
 /**
