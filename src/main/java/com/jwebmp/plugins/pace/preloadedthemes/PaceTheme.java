@@ -16,8 +16,8 @@
  */
 package com.jwebmp.plugins.pace.preloadedthemes;
 
-import com.jwebmp.base.references.CSSReference;
-import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
+import com.jwebmp.core.base.references.CSSReference;
+import com.jwebmp.core.base.servlets.enumarations.RequirementsPriority;
 import com.jwebmp.plugins.pace.PaceThemeColour;
 
 /**

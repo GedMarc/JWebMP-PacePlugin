@@ -16,12 +16,12 @@
  */
 package com.jwebmp.plugins.pace;
 
-import com.jwebmp.Feature;
-import com.jwebmp.FileTemplates;
-import com.jwebmp.base.html.interfaces.children.BodyFeatures;
-import com.jwebmp.base.servlets.interfaces.Loader;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.Feature;
+import com.jwebmp.core.FileTemplates;
+import com.jwebmp.core.base.html.interfaces.children.BodyFeatures;
+import com.jwebmp.core.base.servlets.interfaces.Loader;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
 /**

@@ -16,8 +16,8 @@
  */
 package com.jwebmp.plugins.pace;
 
-import com.jwebmp.Page;
-import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 import org.junit.jupiter.api.Test;
 

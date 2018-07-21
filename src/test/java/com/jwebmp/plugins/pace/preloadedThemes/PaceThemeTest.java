@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.pace.preloadedThemes;
 
-import com.jwebmp.generics.WebReference;
+import com.jwebmp.core.generics.WebReference;
 import com.jwebmp.plugins.pace.PaceLoaderPageConfigurator;
 import com.jwebmp.plugins.pace.PaceThemeColour;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;

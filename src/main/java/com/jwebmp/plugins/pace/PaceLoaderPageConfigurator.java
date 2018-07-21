@@ -16,10 +16,10 @@
  */
 package com.jwebmp.plugins.pace;
 
-import com.jwebmp.Page;
-import com.jwebmp.PageConfigurator;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.PageConfigurator;
+import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.logger.LogFactory;
-import com.jwebmp.plugins.PluginInformation;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
 import java.util.logging.Logger;
