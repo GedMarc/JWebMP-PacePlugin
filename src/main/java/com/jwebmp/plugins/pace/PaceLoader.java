@@ -62,8 +62,6 @@ public class PaceLoader
 
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		addCssReference(theme.getCSSReference());
-
-		getProperties().put(PaceLoaderPageConfigurator.PaceEnabled, true);
 	}
 
 	/**

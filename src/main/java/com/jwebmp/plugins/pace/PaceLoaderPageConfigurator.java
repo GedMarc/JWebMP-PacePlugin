@@ -17,12 +17,9 @@
 package com.jwebmp.plugins.pace;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
-import com.jwebmp.logger.LogFactory;
+import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
-
-import java.util.logging.Logger;
 
 /**
  * @author GedMarc
@@ -44,13 +41,8 @@ import java.util.logging.Logger;
 		pluginIconImageUrl = "bower_components/PACE/example.png",
 		pluginLastUpdatedDate = "2017/03/04")
 public class PaceLoaderPageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
-	public static final String PaceEnabled = "pace-enabled";
-	private static final Logger log = LogFactory.getInstance()
-	                                            .getLogger("PaceLoader");
-	private static final long serialVersionUID = 1L;
-
 	private static PaceTheme paceTheme = PaceTheme.Flash;
 
 	public PaceLoaderPageConfigurator()
@@ -58,6 +50,7 @@ public class PaceLoaderPageConfigurator
 		//Nothing Needed
 	}
 
+	@SuppressWarnings("unused")
 	public static PaceTheme getPaceTheme()
 	{
 		return paceTheme;
