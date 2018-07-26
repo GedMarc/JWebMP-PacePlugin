@@ -14,5 +14,6 @@ module com.jwebmp.plugins.pace {
 	requires java.logging;
 
 	provides IPageConfigurator with PaceLoaderPageConfigurator;
-
+	opens com.jwebmp.plugins.pace to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.pace.preloadedthemes to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
