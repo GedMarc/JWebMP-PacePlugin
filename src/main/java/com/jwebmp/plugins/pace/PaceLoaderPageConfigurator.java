@@ -21,6 +21,8 @@ import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author GedMarc
  * @since 13 Feb 2017
@@ -61,6 +63,7 @@ public class PaceLoaderPageConfigurator
 		PaceLoaderPageConfigurator.paceTheme = paceTheme;
 	}
 
+	@NotNull
 	@Override
 	public Page configure(Page page)
 	{
