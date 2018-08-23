@@ -18,7 +18,6 @@ package com.jwebmp.plugins.pace;
 
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.FileTemplates;
-import com.jwebmp.core.base.html.interfaces.children.BodyFeatures;
 import com.jwebmp.core.base.servlets.interfaces.Loader;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 import com.jwebmp.core.plugins.ComponentInformation;
@@ -36,8 +35,8 @@ import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 		description = "Automatic page load progress bar",
 		url = "http://github.hubspot.com/pace/docs/welcome/")
 public class PaceLoader
-		extends Feature<JavaScriptPart, PaceLoader>
-		implements Loader, BodyFeatures, IPaceLoader
+		extends Feature<PaceLoader, JavaScriptPart, PaceLoader>
+		implements Loader, IPaceLoader
 {
 
 	private static final long serialVersionUID = 1L;
