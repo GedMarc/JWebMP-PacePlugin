@@ -34,16 +34,16 @@ import javax.validation.constraints.NotNull;
 		pluginDependancyUniqueIDs = "",
 		pluginCategories = "js, loader, pace",
 		pluginSubtitle = "Automatically add a progress bar to your site",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-PacePlugin",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-PacePlugin",
 		pluginSourceUrl = "https://github.com/HubSpot/pace/",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-PacePlugin/wiki",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-PacePlugin/wiki",
 		pluginOriginalHomepage = "http://github.hubspot.com/pace/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/PacePlugin.jar/download",
 		pluginIconUrl = "bower_components/PACE/logo.jpg",
 		pluginIconImageUrl = "bower_components/PACE/example.png",
 		pluginLastUpdatedDate = "2017/03/04")
 public class PaceLoaderPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<PaceLoaderPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
