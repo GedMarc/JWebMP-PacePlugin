@@ -39,7 +39,7 @@ public class PaceLoader
 		implements Loader, IPaceLoader
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The actual theme
 	 */
