@@ -17,7 +17,6 @@
 package com.jwebmp.plugins.pace;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 import org.junit.jupiter.api.Test;
 
@@ -64,7 +63,6 @@ public class PaceLoaderTest
 	public void testAngularPageConfiguration()
 	{
 		Page p = new Page();
-		AngularPageConfigurator.setRequired(true);
 		p.getOptions()
 		 .setDynamicRender(false);
 		PaceLoader pl;
