@@ -38,8 +38,6 @@ public class PaceLoader
 		extends Feature<PaceLoader, JavaScriptPart, PaceLoader>
 		implements Loader, IPaceLoader
 {
-
-
 	/**
 	 * The actual theme
 	 */
@@ -54,10 +52,24 @@ public class PaceLoader
 	{
 		super("PaceLoader");
 		this.theme = theme;
+		StringBuilder beforeTemplate = FileTemplates.getTemplateVariables()
+		                                            .get("BEFORE_AJAX_CALL;");
+		if (beforeTemplate == null)
+		{
+			beforeTemplate = new StringBuilder();
+		}
+		StringBuilder afterTemplate = FileTemplates.getTemplateVariables()
+		                                           .get("AFTER_AJAX_CALL;");
+		if (afterTemplate == null)
+		{
+			afterTemplate = new StringBuilder();
+		}
+
 		FileTemplates.getTemplateVariables()
-		             .put("PACE_TRACK_START;", new StringBuilder("Pace.options.ajax.trackWebSockets = false;" + getNewLine() + "\tPace.track(function(){" + getNewLine()));
+		             .put("BEFORE_AJAX_CALL;",
+		                  beforeTemplate.append(new StringBuilder("Pace.options.ajax.trackWebSockets = false;" + getNewLine() + "\tPace.track(function(){" + getNewLine())));
 		FileTemplates.getTemplateVariables()
-		             .put("PACE_TRACK_END;", new StringBuilder("});" + getNewLine()));
+		             .put("AFTER_AJAX_CALL;", afterTemplate.append(new StringBuilder("});" + getNewLine())));
 
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
 		addCssReference(theme.getCSSReference());
