@@ -5,7 +5,6 @@ module com.jwebmp.plugins.pace {
 
 	requires com.jwebmp.core;
 	requires com.guicedee.logmaster;
-	requires com.fasterxml.jackson.annotation;
 
 	requires java.validation;
 	requires java.logging;
@@ -13,7 +12,6 @@ module com.jwebmp.plugins.pace {
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.pace.PaceLoaderPageConfigurator;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.pace.implementations.PaceExclusionsModule;
-
 
 	opens com.jwebmp.plugins.pace to com.fasterxml.jackson.databind, com.jwebmp.core;
 	opens com.jwebmp.plugins.pace.preloadedthemes to com.fasterxml.jackson.databind, com.jwebmp.core;
