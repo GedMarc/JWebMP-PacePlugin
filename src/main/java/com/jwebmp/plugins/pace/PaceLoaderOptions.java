@@ -19,7 +19,7 @@ package com.jwebmp.plugins.pace;
 
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * The window options for the pace loader
