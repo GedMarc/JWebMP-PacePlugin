@@ -18,6 +18,7 @@ package com.jwebmp.plugins.pace;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 
@@ -30,18 +31,24 @@ import jakarta.validation.constraints.NotNull;
 @PluginInformation(pluginName = "Pace Loader",
 		pluginUniqueName = "pace-loader",
 		pluginDescription = "Pace is a Javascript and CSS library to automatically add beautiful progress and activity indicators for page loads and ajax navigation",
-		pluginVersion = "1.0.2",
+		pluginVersion = "1.2.3",
 		pluginDependancyUniqueIDs = "",
 		pluginCategories = "js, loader, pace",
 		pluginSubtitle = "Automatically add a progress bar to your site",
 		pluginGitUrl = "https://github.com/GedMarc/JWebMP-PacePlugin",
-		pluginSourceUrl = "https://github.com/HubSpot/pace/",
+		pluginSourceUrl = "https://github.com/CodeByZach/pace",
 		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-PacePlugin/wiki",
-		pluginOriginalHomepage = "http://github.hubspot.com/pace/",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/PacePlugin.jar/download",
-		pluginIconUrl = "bower_components/PACE/logo.jpg",
-		pluginIconImageUrl = "bower_components/PACE/example.png",
-		pluginLastUpdatedDate = "2017/03/04")
+		pluginOriginalHomepage = "https://codebyzach.github.io/pace/",
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.javascript/jwebmp-pace-loader",
+		pluginIconUrl = "",
+		pluginIconImageUrl = "",
+		pluginLastUpdatedDate = "2020/12/14",
+		pluginGroupId = "com.jwebmp.plugins.javascript",
+		pluginArtifactId = "jwebmp-pace-loader",
+		pluginModuleName = "com.jwebmp.plugins.pace",
+		pluginStatus = PluginStatus.Released
+		
+)
 public class PaceLoaderPageConfigurator
 		implements IPageConfigurator<PaceLoaderPageConfigurator>
 {
@@ -94,7 +101,7 @@ public class PaceLoaderPageConfigurator
 
 	@NotNull
 	@Override
-	public Page configure(Page page)
+	public Page<?> configure(Page<?> page)
 	{
 		page.getBody()
 		    .addFeature(new PaceLoader(PaceLoaderPageConfigurator.paceTheme));

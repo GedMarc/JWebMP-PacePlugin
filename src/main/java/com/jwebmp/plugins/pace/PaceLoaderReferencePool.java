@@ -29,43 +29,51 @@ import com.jwebmp.core.base.servlets.interfaces.ReferencePool;
 public enum PaceLoaderReferencePool
 		implements ReferencePool
 {
-
+	
 	/**
 	 * Put Pace Loader First
 	 */
-	PaceLoader(new JavascriptReference("PACE", 1.02, "bower_components/PACE/pace.min.js", "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js", 0), -1),
-	/**
-	 * A disable pace web services script
-	 */
-	PaceLoaderDisableWebSockets(new JavascriptReference("PACE_DisableWebSockets", 1.02, "javascript/pace_ws_disable.js", "javascript/pace_ws_disable.js", 1), 0);
+	PaceLoader(new JavascriptReference("PACE", 1.23, "bower_components/PACE/pace.min.js",
+	                                   "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js", 0),
+	           new CSSReference("PACE", 1.23, "bower_components/PACE/pace-theme-default.min.css"), -1)
+	;
 
 	private JavascriptReference javaScriptReference;
-
+	private CSSReference cssReference;
+	
 	PaceLoaderReferencePool(JavascriptReference javaScriptReference, int sortOrder)
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.javaScriptReference.setSortOrder(sortOrder);
 		javaScriptReference.setPriority(RequirementsPriority.Top_Shelf);
 	}
-
+	
+	PaceLoaderReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference, int sortOrder)
+	{
+		this.javaScriptReference = javaScriptReference;
+		this.javaScriptReference.setSortOrder(sortOrder);
+		this.cssReference = cssReference;
+		javaScriptReference.setPriority(RequirementsPriority.Top_Shelf);
+	}
+	
 	@Override
 	public CSSReference getCssReference()
 	{
-		return null;
+		return this.cssReference;
 	}
-
+	
 	@Override
 	public void setCssReference(CSSReference cssReference)
 	{
-		//Nothing Needed
+		this.cssReference = cssReference;
 	}
-
+	
 	@Override
 	public JavascriptReference getJavaScriptReference()
 	{
 		return javaScriptReference;
 	}
-
+	
 	@Override
 	public void setJavaScriptReference(JavascriptReference javaScriptReference)
 	{

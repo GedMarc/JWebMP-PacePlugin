@@ -35,7 +35,7 @@ import com.jwebmp.plugins.pace.preloadedthemes.PaceTheme;
 		description = "Automatic page load progress bar",
 		url = "http://github.hubspot.com/pace/docs/welcome/")
 public class PaceLoader
-		extends Feature<PaceLoader, JavaScriptPart, PaceLoader>
+		extends Feature<PaceLoader, JavaScriptPart<?>, PaceLoader>
 		implements Loader, IPaceLoader
 {
 	/**
@@ -67,11 +67,17 @@ public class PaceLoader
 
 		FileTemplates.getTemplateVariables()
 		             .put("BEFORE_AJAX_CALL;",
-		                  beforeTemplate.append(new StringBuilder("Pace.options.ajax.trackWebSockets = false;" + getNewLine() + "\tPace.track(function(){" + getNewLine())));
+		                  beforeTemplate.append("Pace.options.ajax.trackWebSockets = false;")
+		                                .append(getNewLine())
+		                                .append("\tPace.track(function(){")
+		                                .append(getNewLine()));
 		FileTemplates.getTemplateVariables()
-		             .put("AFTER_AJAX_CALL;", afterTemplate.append(new StringBuilder("});" + getNewLine())));
+		             .put("AFTER_AJAX_CALL;", afterTemplate.append("});")
+		                                                   .append(getNewLine()));
 
 		addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
+		addCssReference(PaceLoaderReferencePool.PaceLoader.getCssReference());
+		
 		addCssReference(theme.getCSSReference());
 	}
 
