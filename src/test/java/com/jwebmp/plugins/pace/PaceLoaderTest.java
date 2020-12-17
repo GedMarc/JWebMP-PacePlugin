@@ -48,7 +48,7 @@ public class PaceLoaderTest
 	@Test
 	public void testPageConfiguration()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		PaceLoader pl;
@@ -62,7 +62,7 @@ public class PaceLoaderTest
 	@Test
 	public void testAngularPageConfiguration()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		PaceLoader pl;
