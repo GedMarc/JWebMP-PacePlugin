@@ -13,7 +13,6 @@ module com.jwebmp.plugins.pace {
 	requires com.guicedee.guicedinjection;
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.pace.PaceLoaderPageConfigurator;
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.pace.implementations.PaceExclusionsModule;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleInclusions with PaceModuleInclusions;
 
 	opens com.jwebmp.plugins.pace to com.fasterxml.jackson.databind, com.jwebmp.core;

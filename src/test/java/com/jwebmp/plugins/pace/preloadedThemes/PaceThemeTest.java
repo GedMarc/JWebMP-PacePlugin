@@ -16,6 +16,7 @@
  */
 package com.jwebmp.plugins.pace.preloadedThemes;
 
+import com.jwebmp.core.Page;
 import com.jwebmp.core.generics.WebReference;
 import com.jwebmp.plugins.pace.PaceLoaderPageConfigurator;
 import com.jwebmp.plugins.pace.PaceThemeColour;
@@ -47,6 +48,9 @@ public class PaceThemeTest
 			System.out.println(pc.getCSSReference());
 		}
 
+		Page p = new Page();
+		p.add("");
+		System.out.println(p.toString(true));
 	}
 
 }

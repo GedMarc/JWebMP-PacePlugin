@@ -69,7 +69,7 @@ public enum PaceTheme
 		this.CSSReference = CSSReference;
 		this.CSSReference.setPriority(RequirementsPriority.First);
 		this.CSSReference.setCanMinifyAtRemote(false);
-		CSSReference.setSortOrder(0);
+		CSSReference.setSortOrder(5);
 	}
 
 	/**

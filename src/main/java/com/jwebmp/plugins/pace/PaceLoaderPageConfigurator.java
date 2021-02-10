@@ -16,6 +16,7 @@
  */
 package com.jwebmp.plugins.pace;
 
+import com.jwebmp.core.FileTemplates;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.PluginStatus;
@@ -103,8 +104,38 @@ public class PaceLoaderPageConfigurator
 	@Override
 	public Page<?> configure(Page<?> page)
 	{
-		page.getBody()
-		    .addFeature(new PaceLoader(PaceLoaderPageConfigurator.paceTheme));
+		StringBuilder beforeTemplate = FileTemplates.getTemplateVariables()
+				.get("BEFORE_AJAX_CALL;");
+		if (beforeTemplate == null)
+		{
+			beforeTemplate = new StringBuilder();
+		}
+		StringBuilder afterTemplate = FileTemplates.getTemplateVariables()
+				.get("AFTER_AJAX_CALL;");
+		if (afterTemplate == null)
+		{
+			afterTemplate = new StringBuilder();
+		}
+		if(!beforeTemplate.toString().contains("Pace.options.ajax.trackWebSockets"))
+		{
+			FileTemplates.getTemplateVariables()
+					.put("BEFORE_AJAX_CALL;",
+							beforeTemplate.append("Pace.options.ajax.trackWebSockets = false;")
+									.append("\n")
+									.append("\tPace.track(function(){")
+									.append("\n"));
+			FileTemplates.getTemplateVariables()
+					.put("AFTER_AJAX_CALL;", afterTemplate.append("});")
+							.append("\n"));
+
+		}
+
+		page.getBody().addJavaScriptReference(PaceLoaderReferencePool.PaceLoader.getJavaScriptReference());
+		if(paceTheme == null) {
+			page.getBody().addCssReference(PaceLoaderReferencePool.PaceLoader.getCssReference());
+		}
+
+		page.getBody().addCssReference(paceTheme.getCSSReference());
 
 		return page;
 	}
