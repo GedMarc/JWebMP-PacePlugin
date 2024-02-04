@@ -6,7 +6,7 @@ module com.jwebmp.plugins.pace {
 	exports com.jwebmp.plugins.pace.preloadedthemes;
 
 	requires com.jwebmp.core;
-	requires com.guicedee.logmaster;
+	
 
 	requires jakarta.validation;
 	requires java.logging;
